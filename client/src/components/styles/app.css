@@ -1,0 +1,38 @@
+.all-coins {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.coin {
+  height: 250px;
+  width: 250px;
+  background-color: midnightblue;
+  margin: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+h4 {
+  width: 100%;
+  margin: 0;
+}
+
+h5 {
+  width: 100%;
+  margin: 0px 10px;
+}
+
+h3 {
+  width: 100%;
+  font: 40px;
+  text-align: center;
+}
+
+span {
+  display: inherit;
+}
