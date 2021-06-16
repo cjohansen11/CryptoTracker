@@ -20,9 +20,9 @@ const App = () => {
   const [count, setCount] = useState(0);
 
   const handleSearch = (query) => {
-    for (let key of coinList) {
-      console.log(coinList[key])
-    }
+    let regex = query;
+    let result = coinList.filter(coin => coin.match(regex))
+    console.log(result)
   }
 
   const getMarketData = async (currency) => {
@@ -38,7 +38,11 @@ const App = () => {
 
   const getCoinList = async () => {
     const capturedCoinList = await GET.coinList();
-    setCoinList([...capturedCoinList]);
+    let coinNames = []
+    capturedCoinList.forEach(coin => {
+      coinNames.push(coin.name);
+    });
+    setCoinList([...coinNames]);
   };
 
   useEffect( async () => {
